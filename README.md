@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/HoloClean/holoclean.svg?branch=master)](https://travis-ci.org/HoloClean/holoclean)
+
 # HoloClean: A Machine Learning System for Data Enrichment
 
 [HoloClean](http://www.holoclean.io) is built on top of PyTorch and Postgres.
