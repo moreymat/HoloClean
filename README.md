@@ -1,8 +1,9 @@
-[![Build Status](https://travis-ci.org/HoloClean/holoclean.svg?branch=master)](https://travis-ci.org/HoloClean/holoclean)
 
 # HoloClean: A Machine Learning System for Data Enrichment
 
-[HoloClean](http://www.holoclean.io) is built on top of PyTorch and Postgres.
+[HoloClean](http://www.holoclean.io) is built on top of PyTorch and PostgreSQL.
+
+[![Build Status](https://travis-ci.org/HoloClean/holoclean.svg?branch=master)](https://travis-ci.org/HoloClean/holoclean)
 
 HoloClean is a statistical inference engine to impute, clean, and enrich data.
 As a weakly supervised machine learning system, HoloClean leverages available
