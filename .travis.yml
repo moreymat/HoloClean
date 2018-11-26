@@ -1,21 +1,28 @@
-language: generic
-sudo: required
+language: python
+python:
+  - "2.7"
+
+cache: pip
 
 addons:
   postgresql: "9.4"
 
-before_install:
-  - wget https://repo.anaconda.com/archive/Anaconda2-5.3.1-Linux-x86_64.sh -O anaconda.sh
-  - chmod a+x anaconda.sh
-  - travis_wait ./anaconda.sh -b
-  - export PATH=/home/travis/anaconda2/bin:$PATH
-  - travis_wait conda update --yes conda
+git:
+  quiet: true
+  depth: false
+
+# before_install:
+#   - wget https://repo.anaconda.com/archive/Anaconda2-5.3.1-Linux-x86_64.sh -O anaconda.sh
+#   - chmod a+x anaconda.sh
+#   - travis_wait ./anaconda.sh -b
+#   - export PATH=/home/travis/anaconda2/bin:$PATH
+#   - travis_wait conda update --yes conda
 
 install:
-  - conda create --yes -n hc27 python=2.7
-  - source activate hc27
-  - travis_wait pip install -r requirements.txt
-  # The following command is required when running on travis.
+  # - conda create --yes -n hc27 python=2.7
+  # - source activate hc27
+  - pip install -r requirements.txt
+  # The following command is required only when running on travis.
   - pip install google-compute-engine
 
 before_script:
