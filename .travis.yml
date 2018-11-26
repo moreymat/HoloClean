@@ -1,11 +1,10 @@
-language: python
-python:
-  - "2.7"
+language: c
+sudo: required
 
 before_install:
-  - wget https://repo.anaconda.com/archive/Anaconda2-5.3.1-Linux-x86_64.sh -O conda.sh
-  - chmod a+x conda.sh
-  - travis_wait ./conda.sh -b
+  - wget https://repo.anaconda.com/archive/Anaconda2-5.3.1-Linux-x86_64.sh -O anaconda.sh
+  - chmod a+x anaconda.sh
+  - travis_wait ./anaconda.sh -b
   - export PATH=/home/travis/anaconda2/bin:$PATH
   - travis_wait conda update --yes conda
 
@@ -13,6 +12,7 @@ install:
   - conda create --yes -n hc27 python=$TRAVIS_PYTHON_VERSION
   - source activate hc27
   - travis_wait pip install -r requirements.txt
+  - apt-get install postgresql postgresql-contrib
 
 script:
   - cd examples && ./start_example.sh
