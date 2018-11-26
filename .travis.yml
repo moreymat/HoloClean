@@ -14,7 +14,7 @@ git:
 install:
   - travis_wait pip --no-cache-dir install -r requirements.txt
   # The following command is required only when running on travis.
-  #- pip install google-compute-engine
+  - pip install google-compute-engine
 
 before_script:
   - psql -U postgres -c 'create database holo;'
