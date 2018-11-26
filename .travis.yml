@@ -21,7 +21,7 @@ git:
 install:
   # - conda create --yes -n hc27 python=2.7
   # - source activate hc27
-  - travis_wait pip install -r requirements.txt
+  - travis_wait pip --no-cache-dir install -r requirements.txt
   # The following command is required only when running on travis.
   - pip install google-compute-engine
 
