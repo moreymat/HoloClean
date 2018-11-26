@@ -3,10 +3,9 @@
 
 [HoloClean](http://www.holoclean.io) is built on top of PyTorch and PostgreSQL.
 
-Master status:
+Master:
 [![Build Status](https://travis-ci.org/HoloClean/holoclean.svg?branch=master)](https://travis-ci.org/HoloClean/holoclean)
-
-Dev status:
+Dev:
 [![Build Status](https://travis-ci.org/HoloClean/holoclean.svg?branch=dev)](https://travis-ci.org/HoloClean/holoclean)
 
 
