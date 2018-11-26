@@ -4,10 +4,10 @@ services:
   -postgresql
 
 addons:
-  postgresql: "10"
+  postgresql: "11"
   apt:
     packages:
-    - postgresql-10
+    - postgresql-11
 
 before_install:
   - wget https://repo.anaconda.com/archive/Anaconda2-5.3.1-Linux-x86_64.sh -O anaconda.sh
@@ -22,11 +22,11 @@ install:
   - travis_wait pip install -r requirements.txt
 
 before_script:
-  - psql -c 'create database holo;' -U postgres
-  - psql -c 'CREATE USER holocleanuser;' -U postgres
-  - psql -c 'ALTER USER holo WITH PASSWORD 'abcd1234';' -U postgres
-  - psql -c 'GRANT ALL PRIVILEGES ON DATABASE holo TO holocleanuser;' -U postgres
-  - psql -c holo 'ALTER SCHEMA public OWNER TO holo;' -U postgres
+  - psql -U postgres -c 'create database holo;'
+  - psql -U postgres -c 'CREATE USER holocleanuser;'
+  - psql -U postgres -c 'ALTER USER holo WITH PASSWORD 'abcd1234';'
+  - psql -U postgres -c 'GRANT ALL PRIVILEGES ON DATABASE holo TO holocleanuser;'
+  - psql -U postgres -d holo -c 'ALTER SCHEMA public OWNER TO holo;'
 
 script:
   - cd examples && ./start_example.sh
