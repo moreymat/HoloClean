@@ -15,7 +15,7 @@ before_install:
   - travis_wait conda update --yes conda
 
 install:
-  - conda create --yes -n hc27 python=$TRAVIS_PYTHON_VERSION
+  - conda create --yes -n hc27 python=2.7
   - source activate hc27
   - travis_wait pip install -r requirements.txt
 
