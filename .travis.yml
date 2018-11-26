@@ -2,7 +2,7 @@ language: python
 python:
   - "2.7"
 
-cache: pip
+# cache: pip causes memory error.
 
 addons:
   postgresql: "9.4"
