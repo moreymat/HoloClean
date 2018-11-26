@@ -1,10 +1,7 @@
-
-<div style="text-align: right">
 Master:
 [![Build Status](https://travis-ci.org/HoloClean/holoclean.svg?branch=master)](https://travis-ci.org/HoloClean/holoclean)
 Dev:
 [![Build Status](https://travis-ci.org/HoloClean/holoclean.svg?branch=dev)](https://travis-ci.org/HoloClean/holoclean)
-</div>
 
 # HoloClean: A Machine Learning System for Data Enrichment
 
